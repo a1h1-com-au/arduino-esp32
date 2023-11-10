@@ -74,6 +74,7 @@ set(CORE_SRCS
   )
 
 set(LIBRARY_SRCS
+  libraries/FastLED/src/FastLED.cpp
   libraries/ArduinoOTA/src/ArduinoOTA.cpp
   libraries/AsyncUDP/src/AsyncUDP.cpp
   libraries/BluetoothSerial/src/BluetoothSerial.cpp
@@ -86,7 +87,7 @@ set(LIBRARY_SRCS
   libraries/ESP_SR/src/ESP_SR.cpp
   libraries/ESP_SR/src/esp32-hal-sr.c
   libraries/ESPmDNS/src/ESPmDNS.cpp
-  libraries/Ethernet/src/ETH.cpp
+  # libraries/Ethernet/src/ETH.cpp
   libraries/FFat/src/FFat.cpp
   libraries/FS/src/FS.cpp
   libraries/FS/src/vfs_api.cpp
@@ -104,10 +105,10 @@ set(LIBRARY_SRCS
   libraries/RainMaker/src/RMakerQR.cpp
   libraries/RainMaker/src/RMakerUtils.cpp
   libraries/RainMaker/src/AppInsights.cpp
-  libraries/SD_MMC/src/SD_MMC.cpp
-  libraries/SD/src/SD.cpp
-  libraries/SD/src/sd_diskio.cpp
-  libraries/SD/src/sd_diskio_crc.c
+  # libraries/SD_MMC/src/SD_MMC.cpp
+  # libraries/SD/src/SD.cpp
+  # libraries/SD/src/sd_diskio.cpp
+  # libraries/SD/src/sd_diskio_crc.c
   libraries/SimpleBLE/src/SimpleBLE.cpp
   libraries/SPIFFS/src/SPIFFS.cpp
   libraries/SPI/src/SPI.cpp
@@ -175,6 +176,7 @@ set(BLE_SRCS
 set(includedirs
   variants/${CONFIG_ARDUINO_VARIANT}/
   cores/esp32/
+  libraries/FastLED/src
   libraries/ArduinoOTA/src
   libraries/AsyncUDP/src
   libraries/BLE/src
@@ -185,7 +187,7 @@ set(includedirs
   libraries/ESP_SR/src
   libraries/ESP32/src
   libraries/ESPmDNS/src
-  libraries/Ethernet/src
+  # libraries/Ethernet/src
   libraries/FFat/src
   libraries/FS/src
   libraries/HTTPClient/src
@@ -195,8 +197,8 @@ set(includedirs
   libraries/NetBIOS/src
   libraries/Preferences/src
   libraries/RainMaker/src
-  libraries/SD_MMC/src
-  libraries/SD/src
+  # libraries/SD_MMC/src
+  # libraries/SD/src
   libraries/SimpleBLE/src
   libraries/SPIFFS/src
   libraries/SPI/src
